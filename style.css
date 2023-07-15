@@ -73,7 +73,7 @@ header.sticky{
 
 .logo{
     font-size: 26px;
-    font-weight: 700px;
+    font-weight: 600px;
     letter-spacing: 1px;
 }
 
@@ -117,8 +117,12 @@ span{
     display: none;
 }
 
-
-
+/* mobile menu--------------------------------------------------- */
+#mobileNav{
+    display: none;
+    width: 50%;
+}
+/* ------------------------ */
 section{
     padding: 100px 10%;
 }
@@ -762,6 +766,44 @@ footer a i{
     color: var(--secon-bg-color);
 }
 
+/* mobile menu responsive -------------------------------------------*/
+nav{
+    background: var(--bg-color);
+    height: 50px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    /* background: #1b9bff; */
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    /* line-height: 80px; */
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* ---------------------------------------------------------------------- */
 
 
 
@@ -884,6 +926,8 @@ footer a i{
         margin-top: 2rem;
     }
  }
+
+ 
  @media only screen and (max-width: 768px) {
      .home{
         grid-template-columns: 1fr;
@@ -908,6 +952,41 @@ footer a i{
      footer p{
         font-size: .8rem;
     }
+    #mobileNav{
+        display: block;
+    }
+    .navlist{
+        display: none;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
  }
 
  @media(max-width: 420px){

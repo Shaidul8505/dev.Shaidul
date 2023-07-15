@@ -21,7 +21,22 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div id="menu-icon" class='bx bx-menu'></div>
+        <!-- <div id="menu-icon" class='bx bx-menu'></div> -->
+
+        <nav id="mobileNav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class='bx bx-menu' onclick="document.getElementById('menuJs').style.left = '0'"></i>
+            </label>
+            <ul id="menuJs">
+                <li><a href="#home" onclick="document.getElementById('menuJs').style.left = '-100%'">Home</a></li>
+                <li><a href="#about" onclick="document.getElementById('menuJs').style.left = '-100%'">About</a></li>
+                <li><a href="#services" onclick="document.getElementById('menuJs').style.left = '-100%'">Services</a></li>
+                <li><a href="#skills" onclick="document.getElementById('menuJs').style.left = '-100%'">Skills</a></li>
+                <li><a href="#portfolio" onclick="document.getElementById('menuJs').style.left = '-100%'">Portfolio</a></li>
+                <li><a href="#contact" onclick="document.getElementById('menuJs').style.left = '-100%'">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- home section -------------------------------------------------------------------------------------->
